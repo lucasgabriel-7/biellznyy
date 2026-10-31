@@ -1,0 +1,47 @@
+:root{--bg:#f3f5f7;--surface:#fff;--ink:#10212c;--muted:#5b6b77;--blue:#14406b;--yellow:#f4c430;--line:#d9e0e6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1721;--surface:#14232f;--ink:#eef3f6;--muted:#9fb0bc;--blue:#6fb0ee;--line:#26394a}}
+:root[data-theme="dark"]{--bg:#0c1721;--surface:#14232f;--ink:#eef3f6;--muted:#9fb0bc;--blue:#6fb0ee;--line:#26394a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Archivo,system-ui,sans-serif;line-height:1.5}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+header{background:#14406b;color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-weight:800;font-stretch:125%;font-size:1.15rem;letter-spacing:.01em}
+.logo span{background:var(--yellow);color:#10212c;padding:1px 8px;border-radius:4px;margin-left:6px}
+header a.wa{background:var(--yellow);color:#10212c;font-weight:700;text-decoration:none;padding:8px 16px;border-radius:6px}
+.hero{background:#14406b;color:#fff;padding:36px 20px 56px}
+.hero h1{max-width:760px;margin:0 auto 10px;font-size:clamp(2rem,6vw,3.6rem);line-height:1.05;font-weight:800;font-stretch:110%}
+.hero p{max-width:760px;margin:0 auto;color:#cfe0ef;font-size:1.1rem}
+.wrap{max-width:1100px;margin:0 auto}
+.filters{max-width:1100px;margin:-32px auto 24px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;grid-template-columns:2fr 1fr 1.3fr 1fr;gap:14px;box-shadow:0 8px 24px rgba(10,30,50,.12)}
+.filters label{display:flex;flex-direction:column;font-size:.85rem;color:var(--muted);gap:4px}
+.filters input,.filters select{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:9px}
+.filters input[type=range]{padding:0;accent-color:var(--blue)}
+#count{max-width:1100px;margin:0 auto 12px;padding:0 20px;color:var(--muted)}
+.grid{max-width:1100px;margin:0 auto;padding:0 20px 48px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;text-align:left;font:inherit;color:inherit;cursor:pointer;padding:0}
+.card:hover{border-color:var(--blue)}
+.pic{height:140px;display:grid;place-items:center;background:linear-gradient(180deg,var(--bg),var(--line))}
+.pic svg{width:78%;height:auto}
+.info{padding:14px;display:flex;flex-direction:column;gap:4px;flex:1}
+.info h3{margin:0;font-size:1.1rem}
+.info small{color:var(--muted)}
+.plate{margin-top:auto;align-self:flex-start;background:#fff;color:#10212c;border:2px solid #14406b;border-top-width:8px;border-radius:5px;padding:2px 10px;font-weight:800;font-stretch:115%;font-size:1.2rem}
+dialog{border:0;border-radius:12px;padding:0;width:min(560px,94vw);background:var(--surface);color:var(--ink)}
+dialog::backdrop{background:rgba(5,15,25,.6)}
+.d-body{padding:20px}
+.d-body h2{margin:0 0 4px}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:6px 16px;margin:14px 0;padding:0;list-style:none}
+.specs li{border-bottom:1px solid var(--line);padding:4px 0;font-size:.95rem}
+.specs b{color:var(--muted);font-weight:500;display:block;font-size:.8rem}
+.sim{background:var(--bg);border-radius:8px;padding:12px;margin:12px 0}
+.sim label{display:block;font-size:.9rem;color:var(--muted)}
+.sim input{width:100%;accent-color:var(--blue)}
+.parc{font-size:1.3rem;font-weight:800}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{flex:1;text-align:center;padding:11px 14px;border-radius:7px;font:inherit;font-weight:700;border:0;cursor:pointer;text-decoration:none}
+.btn.p{background:#1f9d55;color:#fff}.btn.s{background:var(--line);color:var(--ink)}
+footer{background:#14406b;color:#cfe0ef;padding:24px 20px;text-align:center;font-size:.9rem}
+@media(max-width:760px){.filters{grid-template-columns:1fr 1fr;margin-inline:12px}.filters label:first-child{grid-column:1/-1}}

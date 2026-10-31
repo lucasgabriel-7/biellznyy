@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Via Norte Veículos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header>
+  <div class="logo">Via Norte<span>Veículos</span></div>
+  <a class="wa" href="https://wa.me/5531996870539" target="_blank" rel="noopener">Falar no WhatsApp</a>
+</header>
+<section class="hero">
+  <h1>Seu próximo carro já está na nossa loja.</h1>
+  <p>Seminovos revisados, com laudo cadastral e garantia de 90 dias. Escolha, simule o financiamento e fale com a gente.</p>
+</section>
+
+<div class="filters">
+  <label>Buscar<input id="q" type="search" placeholder="Modelo ou marca"></label>
+  <label>Marca<select id="marca"><option value="">Todas</option></select></label>
+  <label>Preço até <b id="pv"></b><input id="preco" type="range" min="30000" max="200000" step="5000" value="200000"></label>
+  <label>Ordenar<select id="ord"><option value="p1">Menor preço</option><option value="p2">Maior preço</option><option value="a">Mais novos</option><option value="k">Menor km</option></select></label>
+</div>
+<div id="count"></div>
+<main class="grid" id="grid"></main>
+
+<dialog id="dlg"><div class="d-body" id="dbody"></div></dialog>
+
+<footer>Via Norte Veículos · Av. Exemplo, 1000, Belo Horizonte, MG · Seg a sáb, 9h às 18h<br>Os veículos e valores deste site são fictícios, apenas para demonstração.</footer>
+
+<script src="../js/data.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>
